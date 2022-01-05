@@ -1,5 +1,5 @@
 <?php
-// Class: CS 4350 SLC Fall 2019 21412
+// Class: CS 4350 SLC Fall 19 21412
 // Assignment: CS 4350 Final
 // Project: final-Mem-Dixy
 // Student: Clifford Peters
@@ -67,6 +67,7 @@ if (isset($_GET['method'])) {
 	<body class="text-center">
 		<div class="container">
 			<h1 class="h3 mb-3 font-weight-normal"><i>~ Web Crawler ~</i></h1>
+			<p>Published 2019-12-08T23:52Z</p>
 			<br/>
 			<img alt="Frostbite Spider" height="360" src="frostbite-spider.jpg" width="640">
 			<br/>
@@ -87,10 +88,12 @@ if (isset($_GET['method'])) {
 				</div>
 				<br/>
 				<div class="row">
+					<!-- Database this was connected to has been shut down. I should make a new one sometime.
 					<div class="col-6">
 						<button class="btn btn-lg btn-secondary btn-block" name="method" type="submit" value="search">Search the database!</button>
 					</div>
-					<div class="col-6">
+					<div class="col-6">-->
+					<div class="col-12">
 						<button class="btn btn-lg btn-primary btn-block" name="method" type="submit" value="crawl">Crawl the web!</button>
 					</div>
 				</div>
