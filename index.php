@@ -29,6 +29,12 @@ $how = '';
 if (isset($_GET['method'])) {
 	$how = htmlspecialchars($_GET["method"]);
 }
+if ($max > 4096) {
+	$max = 4096;
+}
+if ($sec > 300) {
+	$sec = 300;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,11 +86,11 @@ if (isset($_GET['method'])) {
 				<br/>
 				<div class="form-group">
 					<label for="limit">Max Results</label>
-					<input class="form-control" id="limit" name="limit" type="number" value="<?php echo $max; ?>"/>
+					<input class="form-control" id="limit" name="limit" type="number" max="4096" min="0" value="<?php echo $max; ?>"/>
 				</div>
 				<div class="form-group">
 					<label for="time">Max Time Seconds</label>
-					<input class="form-control" id="time" name="time" type="number" value="<?php echo $sec; ?>"/>
+					<input class="form-control" id="time" name="time" type="number" max="300" min="0" value="<?php echo $sec; ?>"/>
 				</div>
 				<br/>
 				<div class="row">
